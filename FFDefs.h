@@ -91,7 +91,7 @@
 #define FF_PREFPANE_BUNDLE_IDENTIFIER @"com.kevingessner.FunctionFlip"
 #define FF_HELPER_APP_BUNDLE_IDENTIFIER @"com.kevingessner.FFHelperApp"
 #define FF_TERMINATE_NOTIFICATION @"Momento mori"
-#define FF_UPDATE_URL @"http://kevingessner.com/update/functionflip"
+#define FF_UPDATE_URL @"https://raw.githubusercontent.com/mmshivesh/FunctionFlip/master/LatestVersion"
 
 #define KG_LOGIN_KEYPATH @"startAtLogin"
 

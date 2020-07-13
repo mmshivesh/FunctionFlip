@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject">
+            <connections>
+                <outlet property="delegate" destination="375" id="418"/>
+            </connections>
+        </customObject>
+        <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
+            <items>
+                <menuItem title="FunctionFlip" id="56">
+                    <menu key="submenu" title="FunctionFlip" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About FunctionFlip" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129" userLabel="121"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide FunctionFlip" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit FunctionFlip" keyEquivalent="q" id="136" userLabel="1111">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="369"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="140" y="154"/>
+        </menu>
+        <userDefaultsController id="408"/>
+        <customObject id="375" customClass="FFHelperApp">
+            <connections>
+                <outlet property="settingsPanel" destination="449" id="483"/>
+            </connections>
+        </customObject>
+        <userDefaultsController representsSharedInstance="YES" id="409"/>
+        <window title="FunctionFlip Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="449" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="532" y="284" width="276" height="382"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="450">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="382"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="459">
+                        <rect key="frame" x="17" y="345" width="239" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="DKr-DN-o8p"/>
+                        </constraints>
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Let's identify your Mac's keyboard" id="460">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="238" translatesAutoresizingMaskIntoConstraints="NO" id="461">
+                        <rect key="frame" x="17" y="289" width="242" height="48"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="For FunctionFlip to flip the proper keys, select the functions on the F6 and F8 keys matching your keyboard." id="462">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" translatesAutoresizingMaskIntoConstraints="NO" id="475">
+                        <rect key="frame" x="20" y="96" width="236" height="178"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="236" height="43"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="leading" alignment="left" inset="2" id="476">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" imagePosition="leading" alignment="left" state="on" tag="2" inset="2" id="477">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">F6: Blank
+F8: Play/Pause</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" imagePosition="leading" alignment="left" tag="4" inset="2" id="478">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">F6: Illumination Up
+F8: Play/Pause</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" imagePosition="leading" alignment="left" tag="1" inset="2" id="479">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">F6: Num Lock
+F8: Blank</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" imagePosition="leading" alignment="left" tag="3" inset="2" id="480">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">F6: Num Lock
+F8: Toggle Illumination</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <binding destination="409" name="selectedTag" keyPath="values.keySet" id="482"/>
+                        </connections>
+                    </matrix>
+                    <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="484">
+                        <rect key="frame" x="166" y="12" width="96" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="kmW-1U-eJd"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="485">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="orderOut:" target="449" id="486"/>
+                        </connections>
+                    </button>
+                    <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="489">
+                        <rect key="frame" x="18" y="58" width="178" height="18"/>
+                        <buttonCell key="cell" type="check" title="Start FunctionFlip at login" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="490">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="409" name="value" keyPath="values.startAtLogin" id="493"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="492">
+                        <rect key="frame" x="20" y="85" width="236" height="5"/>
+                    </box>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="459" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="461" secondAttribute="leading" id="26M-wW-V9U"/>
+                    <constraint firstItem="484" firstAttribute="top" secondItem="489" secondAttribute="bottom" constant="20" symbolic="YES" id="8SZ-Iu-Trj"/>
+                    <constraint firstItem="461" firstAttribute="top" secondItem="459" secondAttribute="bottom" constant="8" symbolic="YES" id="EZu-9f-R4D"/>
+                    <constraint firstItem="475" firstAttribute="leading" secondItem="492" secondAttribute="leading" id="FJu-FY-Ef8"/>
+                    <constraint firstItem="459" firstAttribute="leading" secondItem="450" secondAttribute="leading" constant="19" id="GUw-9U-K8T"/>
+                    <constraint firstAttribute="trailing" secondItem="484" secondAttribute="trailing" constant="20" symbolic="YES" id="Gpv-GS-N8d"/>
+                    <constraint firstAttribute="trailing" secondItem="461" secondAttribute="trailing" constant="19" id="Iys-Wy-G3N"/>
+                    <constraint firstItem="475" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="489" secondAttribute="leading" id="JCn-h0-KmO"/>
+                    <constraint firstItem="484" firstAttribute="trailing" secondItem="492" secondAttribute="trailing" id="L3j-qX-gjH"/>
+                    <constraint firstItem="492" firstAttribute="top" secondItem="475" secondAttribute="bottom" constant="8" symbolic="YES" id="Lpk-e6-zMo"/>
+                    <constraint firstAttribute="trailing" secondItem="459" secondAttribute="trailing" constant="22" id="NQ9-YE-LXv"/>
+                    <constraint firstItem="475" firstAttribute="top" secondItem="461" secondAttribute="bottom" constant="15" id="ciu-CN-sDz"/>
+                    <constraint firstItem="484" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="450" secondAttribute="leading" constant="20" symbolic="YES" id="dgd-dU-Ow0"/>
+                    <constraint firstItem="459" firstAttribute="top" secondItem="450" secondAttribute="top" constant="20" symbolic="YES" id="km4-Vw-sQe"/>
+                    <constraint firstItem="484" firstAttribute="trailing" secondItem="475" secondAttribute="trailing" id="qhR-4U-5OH"/>
+                    <constraint firstAttribute="trailing" secondItem="489" secondAttribute="trailing" constant="82" id="ylR-Zy-nc9"/>
+                    <constraint firstAttribute="bottom" secondItem="484" secondAttribute="bottom" constant="19" id="yut-vr-w4C"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="421" y="122"/>
+        </window>
+    </objects>
+</document>
