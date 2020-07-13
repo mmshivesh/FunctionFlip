@@ -1,3 +1,15 @@
+# Added Features:
+
+* Adds dark mode support on Mojave and above.
+* Updated reflecting the actual keys on a Mac Keyboard
+
+# Known Bugs:
+
+* Doesn't auto start at login/resume from wake
+
+
+## Original Descriptions:
+
 FunctionFlip
 ============
 
