@@ -10,8 +10,7 @@
 
 ## Original Descriptions:
 
-FunctionFlip
-============
+### FunctionFlip
 
 by Kevin Gessner
 http://kevingessner.com
